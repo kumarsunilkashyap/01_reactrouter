@@ -16,8 +16,9 @@ import User from "./pages/User";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/:id" element={<Layout />}>
       <Route index element={<Home />} />
+      <Route path="home" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
       <Route path="user" element={<User />} />
