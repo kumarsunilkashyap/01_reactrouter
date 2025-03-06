@@ -13,7 +13,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import User from "./pages/User";
-import Login from "./pages/Login";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
