@@ -12,7 +12,8 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import User from "./pages/User";
+import Login from "./pages/Login";
+import PageNotFound from "./pages/PageNotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,7 +22,8 @@ const router = createBrowserRouter(
       <Route path="home" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="user" element={<User />} />
+      <Route path="login" element={<Login />} />
+      <Route path="*" element={<PageNotFound />} />
     </Route>
   )
 );
