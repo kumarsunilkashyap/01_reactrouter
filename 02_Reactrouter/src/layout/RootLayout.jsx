@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Header from "../component/Header";
 
 const RootLayout = () => {
   return (
-    <div>RootLayout</div>
-  )
-}
+    <>
+      <Header />
+    </>
+  );
+};
 
-export default RootLayout
+export default RootLayout;

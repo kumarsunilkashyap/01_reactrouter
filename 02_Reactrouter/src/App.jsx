@@ -2,9 +2,9 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  Routes,
+  RouterProvider,
 } from "react-router-dom";
-import Navbar from "./component/Header";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -15,7 +15,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
-        <Route path="/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product" element={<Product />} />
@@ -24,10 +24,7 @@ function App() {
   );
   return (
     <>
-      <Navbar />
-      <div className="container flex justify-center items-center min-h-screen">
-        <Routes></Routes>
-      </div>
+      <RouterProvider router={router} />
     </>
   );
 }
