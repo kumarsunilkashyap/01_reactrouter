@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -197,6 +198,15 @@ export default function Contact() {
                 className="w-full bg-orange-700 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition ease-in-out duration-300"
               >
                 Submit
+              </button>
+              <button
+                onClick={() => {
+                  useNavigate("/farm");
+                }}
+                type="submit"
+                className="w-full bg-orange-700 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition ease-in-out duration-300"
+              >
+                Farm
               </button>
             </form>
           </div>
