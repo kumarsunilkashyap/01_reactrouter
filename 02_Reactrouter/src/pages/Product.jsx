@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-
 const Product = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -20,7 +19,7 @@ const Product = () => {
   }
 
   return (
-    <div className="mx-auto w-full max-w-7xl bg-gray-100">
+    <div className="mx-auto w-full max-w-7xl ">
       <div className="grid grid-cols-1 gap-6 p-10 max-w-7xl mx-auto sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {products.map((product) => (
           <div
