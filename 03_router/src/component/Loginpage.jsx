@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = () => {
     // Simple authentication logic
-    if (username === 'admin' && password === 'password') {
-      navigate('/layout');
+    if (username === "admin" && password === "password") {
+      navigate("admin");
     } else {
-      alert('Invalid username or password');
+      alert("Invalid username or password");
     }
   };
 
@@ -21,7 +21,9 @@ const LoginPage = () => {
         <h2 className="text-2xl font-bold text-center">Login</h2>
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Username</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Username
+            </label>
             <input
               type="text"
               value={username}
@@ -30,7 +32,9 @@ const LoginPage = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Password</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Password
+            </label>
             <input
               type="password"
               value={password}
