@@ -13,6 +13,7 @@ import RootLayout from "./layout/RootLayout";
 import Login from "./pages/Login";
 import ContactForm from "./pages/ContactForm";
 import Project from "./pages/Project";
+import ContactLayout from "./layout/ContactLayout";
 
 function App() {
   const router = createBrowserRouter(
@@ -23,7 +24,8 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="product" element={<Product />} />
         <Route path="login" element={<Login />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<ContactLayout />} />
+        <Route path="contact" element={<ContactLayout />} />
       </Route>
     )
   );
