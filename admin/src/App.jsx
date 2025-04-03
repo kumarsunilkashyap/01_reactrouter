@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 import Login from "./pages/Login";
 import Layout from "./Layout";
-// import Dashboard from "./pages/Dashboard"; // Removed unused import
+import Dashboard from "./pages/Dashboard"; // Removed unused import
+import Profile from "./pages/Profile";
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -24,13 +25,20 @@ const App = () => {
           element={<Login setIsAuthenticated={setIsAuthenticated} />}
         />
         <Route
-          path="/:admin"
+          path="/admin"
           element={
             <ProtectedRoute>
               <Layout />
             </ProtectedRoute>
           }
-        />
+        >
+          <Route index path="dashboard" element={<Dashboard />} />
+
+          <Route path="*" element={<Dashboard />} />
+
+          <Route path="profile" element={<Profile />} />
+        </Route>
+
         <Route path="/" element={<Navigate to="login" />} />
       </Routes>
     </Router>
